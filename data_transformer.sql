@@ -1,5 +1,4 @@
 -- Data Transformer
--- Simple MySQL practice project
 
 CREATE DATABASE IF NOT EXISTS data_transformer;
 USE data_transformer;
@@ -34,17 +33,14 @@ CREATE TABLE Employees (
 INSERT INTO Customers VALUES
 (1, 'John', 'Doe', ' john.doe@email.com ', '2022-03-15'),
 (2, 'Jane', 'Smith', 'jane.smith@email.com', '2021-11-02'),
-(3, 'Alex', 'Patel', 'alex.patel@email.com', '2023-01-10');
 
 INSERT INTO Orders VALUES
 (101, 1, '2023-07-01', 150.50),
 (102, 2, '2023-07-03', 650.75),
-(103, 1, '2023-08-12', 1200.00);
 
 INSERT INTO Employees VALUES
 (1, 'Mark', 'Johnson', 'Sales', '2020-01-15', 50000.00),
 (2, 'Susan', 'Lee', 'HR', '2021-03-20', 55000.00),
-(3, 'Ravi', 'Shah', 'IT', '2022-06-10', 40000.00);
 
 -- 3. INNER JOIN: orders with matching customer details
 SELECT o.OrderID, c.FirstName, c.LastName, o.OrderDate, o.TotalAmount
